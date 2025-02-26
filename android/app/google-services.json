@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "187324131202",
+    "project_id": "scalor-chat",
+    "storage_bucket": "scalor-chat.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187324131202:android:64cd95c6eb2972f35d119b",
+        "android_client_info": {
+          "package_name": "com.company.scolar_chat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrSpEnIk0MXqQZd8-DTmXwf3ky7I8xHLg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187324131202:android:74608f2d36cffa305d119b",
+        "android_client_info": {
+          "package_name": "com.example.scolar_chat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrSpEnIk0MXqQZd8-DTmXwf3ky7I8xHLg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
