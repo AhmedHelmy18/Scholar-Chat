@@ -2,8 +2,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 import 'package:flutter/material.dart';
+import 'package:scolar_chat/blocs/auth_bloc.dart';
 import 'package:scolar_chat/constants.dart';
-import 'package:scolar_chat/cubits/auth_cubit/auth_cubit.dart';
 import 'package:scolar_chat/helper/show_snack_bar.dart';
 import 'package:scolar_chat/pages/register_page.dart';
 import 'package:scolar_chat/widgets/custom_button.dart';
@@ -23,7 +23,7 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<AuthCubit, AuthState>(
+    return BlocConsumer<AuthBloc, AuthState>(
       listener: (context, state) {
         if (state is LoginLoading) {
           isLoading = true;
@@ -93,9 +93,9 @@ class LoginPage extends StatelessWidget {
                           if (formKey.currentState!.validate()) {
                             isLoading = true;
 
-                            BlocProvider.of<AuthCubit>(
-                              context,
-                            ).loginUser(email: email!, password: password!);
+                            BlocProvider.of<AuthBloc>(context).add(
+                              LoginEvent(email: email!, password: password!),
+                            );
                           } else {}
                         },
                         text: 'LOGIN',
